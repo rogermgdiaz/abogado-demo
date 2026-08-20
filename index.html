@@ -3,104 +3,301 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asesoría Legal de Extranjería en Polonia | Karta Pobytu</title>
+  <title>Poland Starts | Tu Nuevo Comienzo Laboral en Europa</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1E3A8A', // Un azul más profundo y profesional
+              gold: '#FBBF24', // Un dorado más refinado
+              light: '#F3F4F6'
+            }
+          },
+          fontFamily: {
+            'sans': ['Graphik', 'ui-sans-serif', 'system-ui'],
+          },
+          backgroundImage: {
+            'hero-warsaw': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg')",
+            'about-warsaw': "linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('about-bg.jpg')"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Estilos personalizados adicionales */
+    .bg-dots {
+      background-image: radial-gradient(#1E3A8A 1px, transparent 1px);
+      background-size: 10px 10px;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
 
-  <!-- Header / Navbar -->
-  <header class="bg-white shadow-sm border-b border-gray-200">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="font-bold text-xl text-blue-900">LegalPolonia<span class="text-blue-600">.pl</span></div>
-      <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Consulta Gratis</a>
+  <!-- ============================================
+       HEADER / NAVBAR
+       ============================================ -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="text-3xl font-extrabold text-brand-blue flex items-center">
+          <img src="logo-bridge.png" alt="Bridge Logo" class="h-8 mr-2 hidden md:block"> <!-- Asumiendo un logo separado -->
+          POLAND<span class="text-brand-gold ml-1">STARTS</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#contacto" class="text-sm font-semibold text-gray-700 hover:text-brand-blue transition">Contacto</a>
+        <a href="https://wa.me/48730068482" target="_blank" class="bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-green-700 transition flex items-center gap-2">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.56 5.338-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.561-5.338 11.892-11.893 11.892-2.002 0-3.968-.505-5.709-1.468l-6.284 1.685zm6.549-3.081c1.564.93 3.13 1.406 4.671 1.406 5.8 0 10.513-4.713 10.513-10.513s-4.713-10.513-10.513-10.513c-2.822 0-5.467 1.099-7.447 3.078-1.982 1.982-3.082 4.627-3.082 7.435 0 1.894.516 3.719 1.49 5.281l-1.104 4.029 4.148-1.109zM15.527 16.03c-.26-.13-.53-.261-.836-.39-.304-.13-.53-.26-.836-.39s-.53-.26-.836-.39c-.305-.13-.604-.26-.836-.39l-.417.417s-.557.556-.836.835c-.279.278-.557.556-.836.835l-.417.417c-.13.13-.26.13-.52-.13-.26-.26-.78-.781-1.104-1.104s-.781-1.104-1.104-1.104c-.13-.13-.13-.26-.13-.52l.417-.417s.556-.557.835-.836c.278-.279.556-.557.835-.836l.417-.417c.13-.13.13-.417-.13-.678s-.678-.678-.836-.836l-.836-.836c-.13-.13-.26-.261-.52-.13s-.678.522-.836.678c-.158.156-.417.417-.678.678l-.13.13c-.13.13-.261.261-.261.521 0 .261.13.521.13.782s.13.521.261.782.13.521.261.782.261.782.39.913l.13.13c1.104 1.104 2.209 2.209 3.313 3.313 1.104 1.104 2.209 2.209 3.313 3.313 1.104 1.104 2.209 2.209 3.313 3.313z"/></svg>
+          <span class="md:hidden">WhatsApp</span><span class="hidden md:inline">+48 730 068 482</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-4 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    <div>
-      <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Trámites de Extranjería</span>
-      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mt-4 leading-tight">
-        Consigue tu Karta Pobytu sin complicaciones legales
-      </h1>
-      <p class="text-gray-600 mt-4 text-lg">
-        Te ayudamos a gestionar tu residencia, permiso de trabajo y regularización en Polonia con abogados especialistas en extranjería.
-      </p>
-      <ul class="mt-6 space-y-2 text-gray-700 font-medium">
-        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Revisión documental rigurosa</li>
-        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Acompañamiento en la Urząd</li>
-        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Asistencia en español, inglés y polaco</li>
-      </ul>
-    </div>
-
-    <!-- Formulario de Captación -->
-    <div id="contacto" class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100">
-      <h2 class="text-xl font-bold text-gray-900 mb-2">Solicita tu evaluación inicial</h2>
-      <p class="text-sm text-gray-500 mb-6">Completa tus datos y un especialista analizará tu caso en menos de 24 horas.</p>
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="h-screen pt-32 bg-hero-warsaw bg-cover bg-center bg-fixed flex items-center">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
       
-      <form id="leadForm" class="space-y-4">
-        <div>
-          <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Nombre completo</label>
-          <input type="text" id="FULL_NAME" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      <!-- Contenido del Hero (Lado Izquierdo) -->
+      <div class="md:col-span-7 text-white space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Tu puerta de entrada <span class="text-brand-gold">segura y real</span> a empleos en Europa.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200">
+          En <strong class="text-white font-semibold">Poland Starts</strong> somos el puente confiable que une tu talento con oportunidades laborales reales en Polonia. Te ayudamos a iniciar tu nuevo comienzo hoy mismo.
+        </p>
+        <div class="flex items-center gap-4 pt-4">
+          <a href="#contacto" class="bg-brand-gold text-brand-blue px-8 py-3 rounded-lg font-bold hover:bg-white transition shadow-xl">
+            Ver Oportunidades
+          </a>
+          <a href="#about" class="text-white font-medium hover:text-brand-gold transition flex items-center gap-2">
+            Conócenos <span class="text-brand-gold">→</span>
+          </a>
         </div>
+      </div>
 
-        <div>
-          <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Teléfono / WhatsApp</label>
-          <input type="tel" id="PHONE_NUMBER" required placeholder="+48 123 456 789" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
-        </div>
+      <!-- Imagen del Puente / Marcador de posición (Lado Derecho) -->
+      <div class="md:col-span-5 relative flex justify-center items-center">
+          <div class="w-full h-80 bg-dots rounded-3xl p-6 relative">
+            <div class="absolute -top-12 -left-12 text-6xl text-brand-blue opacity-50">✦</div>
+            <div class="absolute -bottom-12 -right-12 text-6xl text-brand-blue opacity-50">✦</div>
+            <div class="w-full h-full bg-white rounded-3xl shadow-xl flex items-center justify-center p-8">
+              <img src="logo-bridge.png" alt="Bridge Logo" class="w-full max-h-full object-contain"> <!-- Reemplazar por logo real -->
+            </div>
+          </div>
+      </div>
 
-        <div>
-          <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Tipo de Trámite</label>
-          <select id="PROCESS_TYPE" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white">
-            <option value="Karta Pobytu (Tymczasowy)">Karta Pobytu (Residencia Temporal)</option>
-            <option value="Karta Stałego Pobytu">Karta Stałego Pobytu (Residencia Permanente)</option>
-            <option value="Zezwolenie o Pracę">Permiso de Trabajo (Zezwolenie)</option>
-            <option value="Otro / Consulta Legal">Otro / Consulta General</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Detalles de tu situación</label>
-          <textarea id="USER_MESSAGE" rows="3" placeholder="Describe brevemente tu situación actual..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
-        </div>
-
-        <button type="submit" id="SUBMIT_BTN" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition shadow-md">
-          Enviar Consulta
-        </button>
-      </form>
-      <div id="STATUS_MSG" class="mt-4 text-center text-sm font-semibold hidden"></div>
     </div>
   </section>
 
-  <!-- Script del Bot de Telegram -->
-  <script>
-    const BOT_TOKEN = "8159048383:AAFw1g-uYIasOq97X9eE1pXj0lSgL38qf9U";
-    const CHAT_ID = "5806653995";
+  <!-- ============================================
+       QUIÉNES SOMOS SECTION
+       ============================================ -->
+  <section id="about" class="py-24 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="h-96 md:h-full bg-about-warsaw bg-cover bg-center rounded-2xl shadow-xl">
+        <!-- Imagen de Varsovia como fondo -->
+      </div>
+      <div class="space-y-6">
+        <h2 class="text-3xl font-extrabold text-brand-blue tracking-tight">
+          Tu aliado confiable para un futuro seguro en Europa.
+        </h2>
+        <p class="text-lg text-gray-700">
+          En <strong class="text-brand-blue font-semibold">Poland Starts</strong> entendemos los desafíos de buscar trabajo en un nuevo país. Somos una agencia especializada en conectar talento internacional con el mercado laboral polaco. Nuestro enfoque se basa en tres pilares fundamentales extraídos de nuestra misión:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4">
+            <span class="text-green-500 text-3xl">🤝</span>
+            <div>
+              <h3 class="font-bold text-gray-900">Proceso transparente</h3>
+              <p class="text-sm text-gray-600">Claridad y honestidad en cada paso del proceso.</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4">
+            <span class="text-blue-500 text-3xl">🛡️</span>
+            <div>
+              <h3 class="font-bold text-gray-900">Acompañamiento y confianza</h3>
+              <p class="text-sm text-gray-600">Soporte legal y personal hasta tu integración.</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4 col-span-1 sm:col-span-2">
+            <span class="text-gold-500 text-3xl">🌱</span>
+            <div>
+              <h3 class="font-bold text-gray-900">Nuevas oportunidades de vida</h3>
+              <p class="text-sm text-gray-600">No solo un trabajo, un nuevo comienzo para ti y tu familia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ============================================
+       OPORTUNIDADES / TRÁMITES SECTION
+       ============================================ -->
+  <section id="oportunidades" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight">
+          Simplificamos tu camino a un empleo real.
+        </h2>
+        <p class="text-lg text-gray-600 mt-4">
+          Te ayudamos con toda la gestión para que solo te preocupes de tu nuevo trabajo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Servicio 1 -->
+        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 space-y-4 hover:shadow-xl transition">
+          <div class="h-16 w-16 bg-brand-blue text-brand-gold flex items-center justify-center rounded-2xl text-4xl shadow-md">
+            📄
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 pt-3">Trámites de Visado</h3>
+          <p class="text-sm text-gray-600">Gestión experta de visados de trabajo y residencia (Tymczasowy/Stałego).</p>
+        </div>
+        <!-- Servicio 2 -->
+        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 space-y-4 hover:shadow-xl transition">
+          <div class="h-16 w-16 bg-brand-gold text-brand-blue flex items-center justify-center rounded-2xl text-4xl shadow-md">
+            💼
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 pt-3">Selección de Personal</h3>
+          <p class="text-sm text-gray-600">Acceso a vacantes exclusivas en empresas polacas seguras y confiables.</p>
+        </div>
+        <!-- Servicio 3 -->
+        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 space-y-4 hover:shadow-xl transition">
+          <div class="h-16 w-16 bg-brand-blue text-brand-gold flex items-center justify-center rounded-2xl text-4xl shadow-md">
+            🚀
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 pt-3">Integración y Soporte</h3>
+          <p class="text-sm text-gray-600">Acompañamiento inicial para tu alojamiento, registro y trámites bancarios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FORMULARIO DE CONTACTO (EL "BOT")
+       ============================================ -->
+  <section id="contacto" class="py-24 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      
+      <!-- Texto Persuasivo (Lado Izquierdo) -->
+      <div class="md:col-span-5 space-y-6">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight">
+          Inicia tu evaluación hoy mismo.
+        </h2>
+        <p class="text-lg text-gray-700">
+          Tu futuro en Europa está a solo un paso. Completa tus datos y nuestro bot inteligente analizará tu perfil para asignarte las oportunidades laborales más adecuadas en Polonia.
+        </p>
+        <ul class="text-brand-blue font-semibold text-lg space-y-2">
+          <li class="flex items-center gap-2">✓ Respuesta en menos de 24h</li>
+          <li class="flex items-center gap-2">✓ Análisis de perfil personalizado</li>
+          <li class="flex items-center gap-2">✓ Proceso totalmente online</li>
+        </ul>
+      </div>
+
+      <!-- Formulario Integrado (Lado Derecho) -->
+      <div class="md:col-span-7 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Evaluación Laboral Gratuita</h3>
+        
+        <form id="leadForm" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Nombre Completo</label>
+              <input type="text" id="FULL_NAME" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">País de Origen</label>
+              <input type="text" id="ORIGIN_COUNTRY" required placeholder="Ej. Chile" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Teléfono / WhatsApp (con código de país)</label>
+            <input type="tel" id="PHONE_NUMBER" required placeholder="Ej. +56 9 1234 5678" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Tipo de Oportunidad que buscas</label>
+            <select id="PROCESS_TYPE" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition bg-white text-gray-600">
+              <option value="Trabajo General (No calificado)">Trabajo General (No calificado)</option>
+              <option value="Trabajo Calificado (Sectores específicos)">Trabajo Calificado (Sectores específicos)</option>
+              <option value="Servicios de Visado/Karta Pobytu">Servicios de Visado/Karta Pobytu</option>
+              <option value="Otro / Consulta General">Otro / Consulta General</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Cuéntanos sobre tu perfil o experiencia</label>
+            <textarea id="USER_MESSAGE" rows="4" placeholder="Ej. Soy electricista con 5 años de experiencia..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition"></textarea>
+          </div>
+
+          <button type="submit" id="SUBMIT_BTN" class="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-bold py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-lg">
+            Solicitar Evaluación <span class="text-brand-gold">→</span>
+          </button>
+        </form>
+        <div id="STATUS_MSG" class="mt-5 text-center text-sm font-semibold hidden"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="py-10 bg-gray-900 text-gray-300 text-center">
+    <p>&copy; 2026 Poland Starts. Todos los derechos reservados.</p>
+    <p class="text-sm mt-1">Conectando Talentos, Construyendo Futuros en Europa.</p>
+  </footer>
+
+  <!-- ============================================
+       SCRIPT DEL BOT DE TELEGRAM
+       ============================================ -->
+  <script>
+    // Configuración de Telegram
+    const BOT_TOKEN = "8159048383:AAFw1g-uYIasOq97X9eE1pXj0lSgL38qf9U"; // El mismo Token de tu bot
+    const CHAT_ID = "5806653995"; // El ID de tu chat de Telegram
+
+    // Capturar el formulario y procesar el envío
     document.getElementById("leadForm").addEventListener("submit", async function(e) {
-      e.preventDefault();
+      e.preventDefault(); // Evita que la página se recargue
       
       const submitBtn = document.getElementById("SUBMIT_BTN");
       const statusMsg = document.getElementById("STATUS_MSG");
       
+      // Estado de carga
       submitBtn.disabled = true;
-      submitBtn.innerText = "Enviando...";
+      submitBtn.innerText = "Procesando Evaluación...";
+      statusMsg.classList.add("hidden");
 
+      // Capturar los valores de los inputs
       const fullName = document.getElementById("FULL_NAME").value;
+      const originCountry = document.getElementById("ORIGIN_COUNTRY").value;
       const phoneNumber = document.getElementById("PHONE_NUMBER").value;
       const processType = document.getElementById("PROCESS_TYPE").value;
       const userMessage = document.getElementById("USER_MESSAGE").value;
 
-      const telegramText = `🔥 *Nuevo Lead Calificado*\n\n` +
+      // Crear el mensaje formateado para Telegram (Markdown)
+      const telegramText = `⚡️ *NUEVA EVALUACIÓN LABORAL - POLAND STARTS*\n\n` +
                            `👤 *Nombre:* ${fullName}\n` +
+                           `🌎 *País:* ${originCountry}\n` +
                            `📞 *Teléfono:* ${phoneNumber}\n` +
-                           `📋 *Trámite:* ${processType}\n` +
+                           `📋 *Interés:* ${processType}\n` +
                            `💬 *Mensaje:* ${userMessage}`;
 
       try {
+        // Enviar la petición a la API de Telegram
         const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json"
+          },
           body: JSON.stringify({
             chat_id: CHAT_ID,
             text: telegramText,
@@ -108,19 +305,25 @@
           })
         });
 
+        // Manejar la respuesta
         if (response.ok) {
-          statusMsg.innerText = "¡Consulta enviada con éxito! Te contactaremos pronto.";
-          statusMsg.className = "mt-4 text-center text-sm font-semibold text-green-600";
+          // Éxito: Mostrar mensaje verde y reiniciar formulario
+          statusMsg.innerText = "¡Tu evaluación ha sido enviada con éxito! Revisaremos tu perfil en menos de 24 horas.";
+          statusMsg.className = "mt-5 text-center text-sm font-semibold text-green-500 bg-green-100 p-4 rounded-lg";
           document.getElementById("leadForm").reset();
         } else {
-          throw new Error("Error en el envío");
+          // Error de Telegram: Lanzar error para capturarlo abajo
+          throw new Error("Error en la API de Telegram");
         }
       } catch (error) {
-        statusMsg.innerText = "Hubo un error al enviar tu consulta. Intenta nuevamente.";
-        statusMsg.className = "mt-4 text-center text-sm font-semibold text-red-600";
+        // Error de red/código: Mostrar mensaje rojo
+        statusMsg.innerText = "Hubo un error al procesar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.";
+        statusMsg.className = "mt-5 text-center text-sm font-semibold text-red-500 bg-red-100 p-4 rounded-lg";
+        console.error("Error:", error);
       } finally {
+        // Restaurar estado del botón
         submitBtn.disabled = false;
-        submitBtn.innerText = "Enviar Consulta";
+        submitBtn.innerHTML = 'Solicitar Evaluación <span class="text-brand-gold">→</span>';
         statusMsg.classList.remove("hidden");
       }
     });
