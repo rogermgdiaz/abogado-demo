@@ -264,6 +264,54 @@
        SCRIPT DEL BOT DE TELEGRAM
        ============================================ -->
   <script>
+
+    // Reemplaza esta variable con la Test URL que copiaste de tu nodo Webhook en n8n
+const N8N_WEBHOOK_URL = "http://localhost:5678/webhook-test/lead-polandstarts";
+
+document.getElementById("leadForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  
+  const submitBtn = document.getElementById("SUBMIT_BTN");
+  const statusMsg = document.getElementById("STATUS_MSG");
+  
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Procesando Evaluación...";
+  statusMsg.classList.add("hidden");
+
+  // Captura de datos del formulario
+  const payload = {
+    fullName: document.getElementById("FULL_NAME").value,
+    originCountry: document.getElementById("ORIGIN_COUNTRY").value,
+    phoneNumber: document.getElementById("PHONE_NUMBER").value,
+    processType: document.getElementById("PROCESS_TYPE").value,
+    userMessage: document.getElementById("USER_MESSAGE").value,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    const response = await fetch(N8N_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (response.ok) {
+      statusMsg.innerText = "¡Tu evaluación ha sido enviada con éxito! Revisaremos tu perfil en menos de 24 horas.";
+      statusMsg.className = "mt-6 text-center text-sm font-semibold text-green-600 bg-green-100 p-5 rounded-xl border border-green-200 shadow";
+      document.getElementById("leadForm").reset();
+    } else {
+      throw new Error("Error al comunicarse con n8n");
+    }
+  } catch (error) {
+    statusMsg.innerText = "Hubo un error al procesar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.";
+    statusMsg.className = "mt-6 text-center text-sm font-semibold text-red-600 bg-red-100 p-5 rounded-xl border border-red-200 shadow";
+    console.error("Error:", error);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Solicitar Evaluación <span class="text-brand-gold text-2xl">→</span>';
+    statusMsg.classList.remove("hidden");
+  }
+});
     // Configuración de Telegram
     const BOT_TOKEN = "8159048383:AAFw1g-uYIasOq97X9eE1pXj0lSgL38qf9U";
     const CHAT_ID = "5806653995";
