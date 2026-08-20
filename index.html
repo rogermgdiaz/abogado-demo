@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poland Starts | Tu Nuevo Comienzo Laboral en Europa</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon SVG vinculación -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             brand: {
-              blue: '#1E3A8A', // Un azul más profundo y profesional
-              gold: '#FBBF24', // Un dorado más refinado
+              blue: '#1E3A8A', // Azul profundo y profesional
+              gold: '#FBBF24', // Dorado refinado
               light: '#F3F4F6'
             }
           },
@@ -20,37 +22,31 @@
             'sans': ['Graphik', 'ui-sans-serif', 'system-ui'],
           },
           backgroundImage: {
-            'hero-warsaw': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg')",
-            'about-warsaw': "linear-gradient(rgba(30, 58, 138, 0.1), rgba(30, 58, 138, 0.1)), url('about-bg.jpg')"
+            // Imagen para la sección Quiénes Somos (Varsovia con superposición)
+            'about-warsaw': "linear-gradient(rgba(30, 58, 138, 0.1), rgba(30, 58, 138, 0.2)), url('about-bg.jpg')"
           }
         }
       }
     }
   </script>
-  <style>
-    /* Estilos personalizados adicionales */
-    .bg-dots {
-      background-image: radial-gradient(#1E3A8A 1px, transparent 1px);
-      background-size: 10px 10px;
-    }
-  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-20 md:pt-24"> <!-- Padding superior para el header fijo -->
 
   <!-- ============================================
        HEADER / NAVBAR
        ============================================ -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-2">
-        <div class="text-3xl font-extrabold text-brand-blue flex items-center">
-          <img src="logo-bridge.png" alt="Bridge Logo" class="h-8 mr-2 hidden md:block"> <!-- Asumiendo un logo separado -->
-          POLAND<span class="text-brand-gold ml-1">STARTS</span>
-        </div>
+        <!-- Logo completo en el header, asumimos fondo transparente -->
+        <a href="#" class="flex items-center">
+          <img src="logo-bridge.png" alt="Poland Starts Logo" class="h-10 w-auto"> 
+        </a>
       </div>
       <div class="flex items-center gap-4">
         <a href="#contacto" class="text-sm font-semibold text-gray-700 hover:text-brand-blue transition">Contacto</a>
         <a href="https://wa.me/48730068482" target="_blank" class="bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-green-700 transition flex items-center gap-2">
+          <!-- Icono de WhatsApp SVG -->
           <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.56 5.338-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.561-5.338 11.892-11.893 11.892-2.002 0-3.968-.505-5.709-1.468l-6.284 1.685zm6.549-3.081c1.564.93 3.13 1.406 4.671 1.406 5.8 0 10.513-4.713 10.513-10.513s-4.713-10.513-10.513-10.513c-2.822 0-5.467 1.099-7.447 3.078-1.982 1.982-3.082 4.627-3.082 7.435 0 1.894.516 3.719 1.49 5.281l-1.104 4.029 4.148-1.109zM15.527 16.03c-.26-.13-.53-.261-.836-.39-.304-.13-.53-.26-.836-.39s-.53-.26-.836-.39c-.305-.13-.604-.26-.836-.39l-.417.417s-.557.556-.836.835c-.279.278-.557.556-.836.835l-.417.417c-.13.13-.26.13-.52-.13-.26-.26-.78-.781-1.104-1.104s-.781-1.104-1.104-1.104c-.13-.13-.13-.26-.13-.52l.417-.417s.556-.557.835-.836c.278-.279.556-.557.835-.836l.417-.417c.13-.13.13-.417-.13-.678s-.678-.678-.836-.836l-.836-.836c-.13-.13-.26-.261-.52-.13s-.678.522-.836.678c-.158.156-.417.417-.678.678l-.13.13c-.13.13-.261.261-.261.521 0 .261.13.521.13.782s.13.521.261.782.13.521.261.782.261.782.39.913l.13.13c1.104 1.104 2.209 2.209 3.313 3.313 1.104 1.104 2.209 2.209 3.313 3.313 1.104 1.104 2.209 2.209 3.313 3.313z"/></svg>
           <span class="md:hidden">WhatsApp</span><span class="hidden md:inline">+48 730 068 482</span>
         </a>
@@ -59,38 +55,34 @@
   </header>
 
   <!-- ============================================
-       HERO SECTION
+       HERO SECTION (Modificado)
        ============================================ -->
-  <section class="h-screen pt-32 bg-hero-warsaw bg-cover bg-center bg-fixed flex items-center">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+  <section class="min-h-[90vh] flex items-center bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center py-16 md:py-24">
       
       <!-- Contenido del Hero (Lado Izquierdo) -->
-      <div class="md:col-span-7 text-white space-y-6">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+      <div class="md:col-span-6 text-gray-900 space-y-6">
+        <span class="bg-brand-light text-brand-blue text-sm font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">Tu Puente a Europa</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-brand-blue">
           Tu puerta de entrada <span class="text-brand-gold">segura y real</span> a empleos en Europa.
         </h1>
-        <p class="text-lg md:text-xl text-gray-200">
-          En <strong class="text-white font-semibold">Poland Starts</strong> somos el puente confiable que une tu talento con oportunidades laborales reales en Polonia. Te ayudamos a iniciar tu nuevo comienzo hoy mismo.
+        <p class="text-lg md:text-xl text-gray-700">
+          En <strong class="text-brand-blue font-semibold">Poland Starts</strong> somos el aliado confiable que une tu talento con oportunidades laborales reales en Polonia. Te ayudamos a iniciar tu nuevo comienzo hoy mismo.
         </p>
         <div class="flex items-center gap-4 pt-4">
-          <a href="#contacto" class="bg-brand-gold text-brand-blue px-8 py-3 rounded-lg font-bold hover:bg-white transition shadow-xl">
+          <a href="#contacto" class="bg-brand-blue text-white px-8 py-3.5 rounded-xl font-bold hover:bg-brand-blue/90 transition shadow-lg text-lg">
             Ver Oportunidades
           </a>
-          <a href="#about" class="text-white font-medium hover:text-brand-gold transition flex items-center gap-2">
+          <a href="#about" class="text-brand-blue font-semibold hover:text-brand-gold transition flex items-center gap-2 text-lg">
             Conócenos <span class="text-brand-gold">→</span>
           </a>
         </div>
       </div>
 
-      <!-- Imagen del Puente / Marcador de posición (Lado Derecho) -->
-      <div class="md:col-span-5 relative flex justify-center items-center">
-          <div class="w-full h-80 bg-dots rounded-3xl p-6 relative">
-            <div class="absolute -top-12 -left-12 text-6xl text-brand-blue opacity-50">✦</div>
-            <div class="absolute -bottom-12 -right-12 text-6xl text-brand-blue opacity-50">✦</div>
-            <div class="w-full h-full bg-white rounded-3xl shadow-xl flex items-center justify-center p-8">
-              <img src="logo-bridge.png" alt="Bridge Logo" class="w-full max-h-full object-contain"> <!-- Reemplazar por logo real -->
-            </div>
-          </div>
+      <!-- Imagen Completa del Logo/Volante (Lado Derecho) - Modificado -->
+      <div class="md:col-span-6 flex justify-center items-center">
+          <!-- Usamos la imagen completa 'hero-bg.jpg' que ya subiste, con bordes redondeados y sombra -->
+          <img src="hero-bg.jpg" alt="Poland Starts Completo" class="w-full max-w-lg h-auto rounded-3xl shadow-2xl border-4 border-white object-cover aspect-[4/5]"> <!-- Ajusta la relación de aspecto si es necesario -->
       </div>
 
     </div>
@@ -101,32 +93,32 @@
        ============================================ -->
   <section id="about" class="py-24 bg-brand-light">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-      <div class="h-96 md:h-full bg-about-warsaw bg-cover bg-center rounded-2xl shadow-sm">
+      <div class="h-96 md:h-full bg-about-warsaw bg-cover bg-center rounded-2xl shadow-xl border-4 border-white">
         <!-- Imagen de Varsovia como fondo -->
       </div>
       <div class="space-y-6">
-        <h2 class="text-3xl font-extrabold text-brand-blue tracking-tight">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight">
           Tu aliado confiable para un futuro seguro en Europa.
         </h2>
         <p class="text-lg text-gray-700">
           En <strong class="text-brand-blue font-semibold">Poland Starts</strong> entendemos los desafíos de buscar trabajo en un nuevo país. Somos una agencia especializada en conectar talento internacional con el mercado laboral polaco. Nuestro enfoque se basa en tres pilares fundamentales extraídos de nuestra misión:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4">
+          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4 shadow">
             <span class="text-green-500 text-3xl">🤝</span>
             <div>
               <h3 class="font-bold text-gray-900">Proceso transparente</h3>
               <p class="text-sm text-gray-600">Claridad y honestidad en cada paso del proceso.</p>
             </div>
           </div>
-          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4">
+          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4 shadow">
             <span class="text-blue-500 text-3xl">🛡️</span>
             <div>
               <h3 class="font-bold text-gray-900">Acompañamiento y confianza</h3>
               <p class="text-sm text-gray-600">Soporte legal y personal hasta tu integración.</p>
             </div>
           </div>
-          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4 col-span-1 sm:col-span-2">
+          <div class="bg-white p-6 rounded-xl border border-gray-100 flex items-start gap-4 shadow col-span-1 sm:col-span-2">
             <span class="text-gold-500 text-3xl">🌱</span>
             <div>
               <h3 class="font-bold text-gray-900">Nuevas oportunidades de vida</h3>
@@ -143,39 +135,39 @@
        ============================================ -->
   <section id="oportunidades" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6 space-y-12">
-      <div class="text-center max-w-2xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-brand-blue tracking-tight">
           Simplificamos tu camino a un empleo real.
         </h2>
-        <p class="text-lg text-gray-600 mt-4">
-          Te ayudamos con toda la gestión para que solo te preocupes de tu nuevo trabajo.
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Te ayudamos con toda la gestión para que solo te preocupes de tu nuevo trabajo y tu futuro en Polonia.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Servicio 1 -->
-        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 space-y-4 hover:shadow-xl transition">
-          <div class="h-16 w-16 bg-brand-blue text-brand-gold flex items-center justify-center rounded-2xl text-4xl shadow-md">
+        <div class="bg-brand-light p-10 rounded-3xl border border-gray-100 space-y-5 hover:shadow-2xl transition duration-300">
+          <div class="h-20 w-20 bg-brand-blue text-brand-gold flex items-center justify-center rounded-2xl text-5xl shadow-lg border-2 border-brand-gold">
             📄
           </div>
-          <h3 class="text-xl font-bold text-gray-900 pt-3">Trámites de Visado</h3>
-          <p class="text-sm text-gray-600">Gestión experta de visados de trabajo y residencia (Tymczasowy/Stałego).</p>
+          <h3 class="text-2xl font-bold text-gray-900 pt-3">Trámites de Visado</h3>
+          <p class="text-gray-700">Gestión experta de visados de trabajo y residencia (Tymczasowy/Stałego) sin errores documentales.</p>
         </div>
         <!-- Servicio 2 -->
-        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 space-y-4 hover:shadow-xl transition">
-          <div class="h-16 w-16 bg-brand-gold text-brand-blue flex items-center justify-center rounded-2xl text-4xl shadow-md">
+        <div class="bg-brand-light p-10 rounded-3xl border border-gray-100 space-y-5 hover:shadow-2xl transition duration-300">
+          <div class="h-20 w-20 bg-brand-gold text-brand-blue flex items-center justify-center rounded-2xl text-5xl shadow-lg border-2 border-brand-blue">
             💼
           </div>
-          <h3 class="text-xl font-bold text-gray-900 pt-3">Selección de Personal</h3>
-          <p class="text-sm text-gray-600">Acceso a vacantes exclusivas en empresas polacas seguras y confiables.</p>
+          <h3 class="text-2xl font-bold text-gray-900 pt-3">Selección de Personal</h3>
+          <p class="text-gray-700">Acceso exclusivo a vacantes en empresas polacas verificadas, seguras y con contratos reales.</p>
         </div>
         <!-- Servicio 3 -->
-        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 space-y-4 hover:shadow-xl transition">
-          <div class="h-16 w-16 bg-brand-blue text-brand-gold flex items-center justify-center rounded-2xl text-4xl shadow-md">
+        <div class="bg-brand-light p-10 rounded-3xl border border-gray-100 space-y-5 hover:shadow-2xl transition duration-300">
+          <div class="h-20 w-20 bg-brand-blue text-brand-gold flex items-center justify-center rounded-2xl text-5xl shadow-lg border-2 border-brand-gold">
             🚀
           </div>
-          <h3 class="text-xl font-bold text-gray-900 pt-3">Integración y Soporte</h3>
-          <p class="text-sm text-gray-600">Acompañamiento inicial para tu alojamiento, registro y trámites bancarios.</p>
+          <h3 class="text-2xl font-bold text-gray-900 pt-3">Integración y Soporte</h3>
+          <p class="text-gray-700">Acompañamiento inicial para alojamiento, registro (PESEL), cuenta bancaria y adaptación cultural.</p>
         </div>
       </div>
     </div>
@@ -189,43 +181,52 @@
       
       <!-- Texto Persuasivo (Lado Izquierdo) -->
       <div class="md:col-span-5 space-y-6">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-brand-blue tracking-tight">
           Inicia tu evaluación hoy mismo.
         </h2>
         <p class="text-lg text-gray-700">
           Tu futuro en Europa está a solo un paso. Completa tus datos y nuestro bot inteligente analizará tu perfil para asignarte las oportunidades laborales más adecuadas en Polonia.
         </p>
-        <ul class="text-brand-blue font-semibold text-lg space-y-2">
-          <li class="flex items-center gap-2">✓ Respuesta en menos de 24h</li>
-          <li class="flex items-center gap-2">✓ Análisis de perfil personalizado</li>
-          <li class="flex items-center gap-2">✓ Proceso totalmente online</li>
+        <ul class="text-brand-blue font-semibold text-lg space-y-3">
+          <li class="flex items-center gap-3">
+            <span class="flex items-center justify-center h-8 w-8 bg-brand-gold rounded-full text-brand-blue shadow">✓</span>
+            Respuesta en menos de 24h
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="flex items-center justify-center h-8 w-8 bg-brand-gold rounded-full text-brand-blue shadow">✓</span>
+            Análisis de perfil personalizado
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="flex items-center justify-center h-8 w-8 bg-brand-gold rounded-full text-brand-blue shadow">✓</span>
+            Proceso totalmente online
+          </li>
         </ul>
       </div>
 
       <!-- Formulario Integrado (Lado Derecho) -->
-      <div class="md:col-span-7 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-        <h3 class="text-2xl font-bold text-gray-900 mb-6">Evaluación Laboral Gratuita</h3>
+      <div class="md:col-span-7 bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-gray-100">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Evaluación Laboral Gratuita</h3>
         
-        <form id="leadForm" class="space-y-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <form id="leadForm" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Nombre Completo</label>
-              <input type="text" id="FULL_NAME" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
+              <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre Completo</label>
+              <input type="text" id="FULL_NAME" required placeholder="Ej. Juan Pérez" class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
             </div>
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">País de Origen</label>
-              <input type="text" id="ORIGIN_COUNTRY" required placeholder="Ej. Chile" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
+              <label class="block text-sm font-semibold text-gray-700 mb-2">País de Origen</label>
+              <input type="text" id="ORIGIN_COUNTRY" required placeholder="Ej. Chile" class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
             </div>
           </div>
 
           <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Teléfono / WhatsApp (con código de país)</label>
-            <input type="tel" id="PHONE_NUMBER" required placeholder="Ej. +56 9 1234 5678" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Teléfono / WhatsApp (con código de país)</label>
+            <input type="tel" id="PHONE_NUMBER" required placeholder="Ej. +56 9 1234 5678" class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition">
           </div>
 
           <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Tipo de Oportunidad que buscas</label>
-            <select id="PROCESS_TYPE" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition bg-white text-gray-600">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Tipo de Oportunidad que buscas</label>
+            <select id="PROCESS_TYPE" required class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition bg-white text-gray-600">
               <option value="Trabajo General (No calificado)">Trabajo General (No calificado)</option>
               <option value="Trabajo Calificado (Sectores específicos)">Trabajo Calificado (Sectores específicos)</option>
               <option value="Servicios de Visado/Karta Pobytu">Servicios de Visado/Karta Pobytu</option>
@@ -234,15 +235,15 @@
           </div>
 
           <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Cuéntanos sobre tu perfil o experiencia</label>
-            <textarea id="USER_MESSAGE" rows="4" placeholder="Ej. Soy electricista con 5 años de experiencia..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition"></textarea>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Cuéntanos sobre tu perfil o experiencia</label>
+            <textarea id="USER_MESSAGE" rows="5" placeholder="Ej. Soy electricista con 5 años de experiencia..." class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue focus:outline-none transition"></textarea>
           </div>
 
-          <button type="submit" id="SUBMIT_BTN" class="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-bold py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-lg">
-            Solicitar Evaluación <span class="text-brand-gold">→</span>
+          <button type="submit" id="SUBMIT_BTN" class="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-bold py-4.5 rounded-2xl transition shadow-xl flex items-center justify-center gap-3 text-xl">
+            Solicitar Evaluación <span class="text-brand-gold text-2xl">→</span>
           </button>
         </form>
-        <div id="STATUS_MSG" class="mt-5 text-center text-sm font-semibold hidden"></div>
+        <div id="STATUS_MSG" class="mt-6 text-center text-sm font-semibold hidden"></div>
       </div>
 
     </div>
@@ -251,9 +252,12 @@
   <!-- ============================================
        FOOTER
        ============================================ -->
-  <footer class="py-10 bg-gray-900 text-gray-300 text-center">
-    <p>&copy; 2026 Poland Starts. Todos los derechos reservados.</p>
-    <p class="text-sm mt-1">Conectando Talentos, Construyendo Futuros en Europa.</p>
+  <footer class="py-12 bg-gray-900 text-gray-300 text-center border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 space-y-4">
+        <p class="text-lg font-semibold">Poland Starts</p>
+        <p>&copy; 2026 Poland Starts. Todos los derechos reservados.</p>
+        <p class="text-sm mt-1 text-gray-500">Conectando Talentos, Construyendo Futuros en Europa.</p>
+    </div>
   </footer>
 
   <!-- ============================================
@@ -261,8 +265,8 @@
        ============================================ -->
   <script>
     // Configuración de Telegram
-    const BOT_TOKEN = "8159048383:AAFw1g-uYIasOq97X9eE1pXj0lSgL38qf9U"; // El mismo Token de tu bot
-    const CHAT_ID = "5806653995"; // El ID de tu chat de Telegram
+    const BOT_TOKEN = "8159048383:AAFw1g-uYIasOq97X9eE1pXj0lSgL38qf9U";
+    const CHAT_ID = "5806653995";
 
     // Capturar el formulario y procesar el envío
     document.getElementById("leadForm").addEventListener("submit", async function(e) {
@@ -309,7 +313,7 @@
         if (response.ok) {
           // Éxito: Mostrar mensaje verde y reiniciar formulario
           statusMsg.innerText = "¡Tu evaluación ha sido enviada con éxito! Revisaremos tu perfil en menos de 24 horas.";
-          statusMsg.className = "mt-5 text-center text-sm font-semibold text-green-500 bg-green-100 p-4 rounded-lg";
+          statusMsg.className = "mt-6 text-center text-sm font-semibold text-green-600 bg-green-100 p-5 rounded-xl border border-green-200 shadow";
           document.getElementById("leadForm").reset();
         } else {
           // Error de Telegram: Lanzar error para capturarlo abajo
@@ -318,12 +322,12 @@
       } catch (error) {
         // Error de red/código: Mostrar mensaje rojo
         statusMsg.innerText = "Hubo un error al procesar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.";
-        statusMsg.className = "mt-5 text-center text-sm font-semibold text-red-500 bg-red-100 p-4 rounded-lg";
+        statusMsg.className = "mt-6 text-center text-sm font-semibold text-red-600 bg-red-100 p-5 rounded-xl border border-red-200 shadow";
         console.error("Error:", error);
       } finally {
         // Restaurar estado del botón
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Solicitar Evaluación <span class="text-brand-gold">→</span>';
+        submitBtn.innerHTML = 'Solicitar Evaluación <span class="text-brand-gold text-2xl">→</span>';
         statusMsg.classList.remove("hidden");
       }
     });
